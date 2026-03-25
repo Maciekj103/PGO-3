@@ -8,4 +8,11 @@ public class Zamowienie {
     private boolean oplacone;
     private static int kolejnyNumer;
 
+    public Zamowienie(int numerZamowienia, KlientKawiarni klient, ArrayList<ProduktMenu> produkty, boolean oplacone, int kolejnyNumer) {
+        this.numerZamowienia = numerZamowienia;
+        this.klient = klient;
+        this.produkty = produkty;
+        this.oplacone = oplacone;
+        this.kolejnyNumer = kolejnyNumer;
+    }
 }
