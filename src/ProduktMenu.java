@@ -6,13 +6,27 @@ public class ProduktMenu {
     private String kategoria;
     private static int liczbaProduktow;
 
-    public ProduktMenu(String kod, String nazwa, int cena, String kategoria, int liczbaProduktow) {
+    public ProduktMenu(String kod, String nazwa, double cena, String kategoria) {
         this.kod = kod;
         this.nazwa = nazwa;
         this.cena = cena;
         this.kategoria = kategoria;
-        this.liczbaProduktow = liczbaProduktow;
     }
+
+    @Override
+    public String toString(){
+        return "Kod: " + kod + ", Nazwa: " + nazwa + ", Cena: " + cena + " zł, Kategoria: " + kategoria;
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ProduktMenu that =(ProduktMenu) o;
+        return kod.equals(that.kod);
+    };
+
 
     //----------- gettery -----------
     public String getNazwa() {
@@ -55,6 +69,4 @@ public class ProduktMenu {
     public static void setLiczbaProduktow(int liczbaProduktow) {
         ProduktMenu.liczbaProduktow = liczbaProduktow;
     }
-
-
 }
