@@ -14,5 +14,47 @@ public class ProduktMenu {
         this.liczbaProduktow = liczbaProduktow;
     }
 
+    //----------- gettery -----------
+    public String getNazwa() {
+        return nazwa;
+    }
+
+    public String getKod() {
+        return kod;
+    }
+
+    public String getKategoria() {
+        return kategoria;
+    }
+
+    public double getCena() {
+        return cena;
+    }
+
+    public static int getLiczbaProduktow() {
+        return liczbaProduktow;
+    }
+
+    //----------- settery -----------
+    public void setKod(String kod) {
+        this.kod = kod;
+    }
+
+    public void setNazwa(String nazwa) {
+        this.nazwa = nazwa;
+    }
+
+    public void setCena(double cena) {
+        this.cena = cena;
+    }
+
+    public void setKategoria(String kategoria) {
+        this.kategoria = kategoria;
+    }
+
+    public static void setLiczbaProduktow(int liczbaProduktow) {
+        ProduktMenu.liczbaProduktow = liczbaProduktow;
+    }
+
 
 }

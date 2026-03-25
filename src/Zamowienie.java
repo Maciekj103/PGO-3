@@ -15,4 +15,46 @@ public class Zamowienie {
         this.oplacone = oplacone;
         this.kolejnyNumer = kolejnyNumer;
     }
+
+    //----------- gettery i settery -----------
+    public int getNumerZamowienia() {
+        return numerZamowienia;
+    }
+
+    public void setNumerZamowienia(int numerZamowienia) {
+        this.numerZamowienia = numerZamowienia;
+    }
+
+    public KlientKawiarni getKlient() {
+        return klient;
+    }
+
+    public void setKlient(KlientKawiarni klient) {
+        this.klient = klient;
+    }
+
+    public ArrayList<ProduktMenu> getProdukty() {
+        return produkty;
+    }
+
+    public void setProdukty(ArrayList<ProduktMenu> produkty) {
+        this.produkty = produkty;
+    }
+
+    public boolean isOplacone() {
+        return oplacone;
+    }
+
+    public void setOplacone(boolean oplacone) {
+        this.oplacone = oplacone;
+    }
+
+    public static int getKolejnyNumer() {
+        return kolejnyNumer;
+    }
+
+    public static void setKolejnyNumer(int kolejnyNumer) {
+        Zamowienie.kolejnyNumer = kolejnyNumer;
+    }
+
 }
