@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class KlientKawiarni {
 
     private int idKlienta;
@@ -10,6 +12,23 @@ public class KlientKawiarni {
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "KlientKawiarni{" +
+                "idKlienta=" + idKlienta +
+                ", imie='" + imie + '\'' +
+                ", nazwisko='" + nazwisko + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        KlientKawiarni that = (KlientKawiarni) o;
+        return getIdKlienta() == that.getIdKlienta() || Objects.equals(getEmail(), that.getEmail());
     }
 
     //----------- gettery i settery -----------

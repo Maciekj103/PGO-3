@@ -4,16 +4,44 @@ public class Zamowienie {
 
     private int numerZamowienia;
     private KlientKawiarni klient;
-    private ArrayList<ProduktMenu> produkty;
+    private ArrayList<ProduktMenu> produkty = new ArrayList<>();
     private boolean oplacone;
     private static int kolejnyNumer;
 
-    public Zamowienie(int numerZamowienia, KlientKawiarni klient, ArrayList<ProduktMenu> produkty, boolean oplacone, int kolejnyNumer) {
-        this.numerZamowienia = numerZamowienia;
+    public Zamowienie(KlientKawiarni klient) {
         this.klient = klient;
-        this.produkty = produkty;
-        this.oplacone = oplacone;
-        this.kolejnyNumer = kolejnyNumer;
+        kolejnyNumer = getKolejnyNumer() + 1;
+        this.numerZamowienia = getKolejnyNumer();
+    }
+
+    @Override
+    public String toString() {
+        return "Zamowienie{" +
+                "numerZamowienia=" + numerZamowienia +
+                ", klient=" + klient +
+                ", produkty=" + produkty +
+                ", oplacone=" + oplacone +
+                '}';
+    }
+
+    public void dodajProdukt(ProduktMenu produkt){
+        produkty.add(produkt);
+    }
+
+    public double policzWartosc(){
+        double wartosc = 0;
+        for (ProduktMenu produkt : produkty){
+            wartosc += produkt.getCena();
+        }
+        return wartosc;
+    }
+
+    public int policzLiczbeProduktow(){
+        return produkty.size();
+    }
+
+    public void oznaczJakoOplacone(){
+        this.oplacone = true;
     }
 
     //----------- gettery i settery -----------

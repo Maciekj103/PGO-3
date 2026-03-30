@@ -11,6 +11,7 @@ public class ProduktMenu {
         this.nazwa = nazwa;
         this.cena = cena;
         this.kategoria = kategoria;
+        liczbaProduktow++;
     }
 
     @Override
