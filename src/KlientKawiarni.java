@@ -14,6 +14,10 @@ public class KlientKawiarni {
         this.email = email;
     }
 
+    public void wypiszDaneKlienta(){
+        System.out.println("ID: " + idKlienta + "\nImie: " + imie + "\nNazwisko: " + nazwisko + "\nEmail: " + email);
+    }
+
     @Override
     public String toString() {
         return "KlientKawiarni{" +
